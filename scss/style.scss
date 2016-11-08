@@ -1,0 +1,141 @@
+/*
+ * Main Styles
+ */
+
+@import 'reset';
+
+// Colors
+// $primary: #5295e6;
+// $secondary: #baffdb;
+$primary: #2B8AA4;
+$secondary: #A9FFC8;
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto+Slab:300,400,700);
+$helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$open-sans: 'Open Sans', $helvetica;
+$georgia: Georgia, Times, serif;
+$roboto: 'Roboto Slab', $georgia;
+$font: $open-sans;
+$font-secondary: $roboto;
+
+
+// ------------------------- //
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    background: $secondary;
+    background: -moz-linear-gradient(top, $secondary 0%, $primary 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, $secondary 0%,$primary 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, $secondary 0%,$primary 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$secondary', endColorstr='$primary',GradientType=0 ); /* IE6-9 */
+    color: $primary;
+    font-family: $font;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: $font-secondary;
+}
+
+a {
+    color: $primary;
+}
+
+::-moz-selection {
+    color: $secondary;
+    background: $primary;
+}
+
+::selection {
+    color: $secondary;
+    background: $primary;
+}
+
+.section {
+    padding: 4rem;
+
+    .container {
+        max-width: 1000px;
+    }
+}
+
+.section--alt {
+    // background: $primary;
+    color: $secondary;
+
+    a {
+        color: $secondary;
+    }
+}
+
+.section--hero {
+    padding-bottom: 5rem;
+
+    h1 {
+        margin: 0 0 2rem;
+        font-size: 6.5rem;
+        line-height: 1;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 4rem;
+        font-weight: normal;
+        line-height: 1.25;
+
+        span {
+            text-decoration: underline;
+        }
+    }
+}
+
+.section--next-meetup {
+    .date {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.25;
+    }
+
+    .location,
+    .title {
+        font-size: 2rem;
+    }
+
+    .title {
+        margin: 4rem 0 1rem;
+    }
+
+    .description {
+        font-size: 1.25rem;
+        line-height: 1.25;
+        margin-bottom: 1rem;
+    }
+
+    .credit,
+    .callout {
+        font-size: 1.25rem;
+    }
+
+    .credit {
+        margin-bottom: 4rem;
+    }
+
+    .callout {
+        &:before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            margin-bottom: 4rem;
+            background: $secondary;
+        }
+    }
+}
+
