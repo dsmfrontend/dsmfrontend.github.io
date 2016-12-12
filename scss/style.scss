@@ -5,10 +5,6 @@
 @import 'reset';
 
 // Colors
-// $primary: #5295e6;
-// $secondary: #baffdb;
-// $primary: #2B8AA4;
-// $secondary: #A9FFC8;
 $primary: #a1ffa5;
 $secondary: #2a4958;
 
@@ -21,6 +17,9 @@ $roboto: 'Roboto Slab', $georgia;
 $font: $open-sans;
 $font-secondary: $roboto;
 
+// Other
+$max-width: 54rem;
+
 
 // ------------------------- //
 
@@ -32,18 +31,28 @@ $font-secondary: $roboto;
 }
 
 html {
+    color: $primary;
+    font-family: $font;
+    min-width: 20rem;
     background: $secondary;
     // background: -moz-linear-gradient(top, $secondary 0%, $primary 100%); /* FF3.6-15 */
     // background: -webkit-linear-gradient(top, $secondary 0%,$primary 100%); /* Chrome10-25,Safari5.1-6 */
     // background: linear-gradient(to bottom, $secondary 0%,$primary 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$secondary', endColorstr='$primary',GradientType=0 ); /* IE6-9 */
-    color: $primary;
-    font-family: $font;
 }
 
 h1, h2, h3,
 h4, h5, h6 {
     font-family: $font-secondary;
+}
+
+p {
+    line-height: 1.25;
+    margin-bottom: 1rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 a {
@@ -55,13 +64,14 @@ a {
     background: #ccffd1;
 }
 
-.section {
-    padding: 5rem 2rem;
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
 
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-    }
+.section {
+    padding: 5rem 0;
 }
 
 .section--space {
@@ -71,7 +81,7 @@ a {
         &:after {
             content: '';
             position: absolute;
-            left: 0;
+            left: 2rem;
             bottom: -5rem;
             display: block;
             width: 100px;
@@ -92,20 +102,35 @@ a {
 .section--hero {
     h1 {
         margin: 0 0 2rem;
-        font-size: 5.75rem;
+        font-size: 2.75rem;
         line-height: 1;
+
+        @media (min-width: 30rem) {
+            font-size: 5rem;
+        }
+
+        @media (min-width: $max-width) {
+            font-size: 5.75rem;
+        }
 
         span {
             display: block;
-            font-size: 9.1rem;
+
+            @media (min-width: $max-width) {
+                font-size: 9.1rem;
+            }
         }
     }
 
     h2 {
         margin: 0;
-        font-size: 1.8rem;
+        font-size: 1.25rem;
         font-weight: normal;
         line-height: 1.25;
+
+        @media (min-width: 30rem) {
+            font-size: 1.8rem;
+        }
 
         span {
             text-decoration: underline;
@@ -115,29 +140,53 @@ a {
 
 .section--next-meetup {
     .date {
-        font-size: 2.25rem;
+        font-size: 1.25rem;
         margin-bottom: 0.5rem;
         line-height: 1.25;
+
+        @media (min-width: 30rem) {
+            font-size: 1.75rem;
+        }
     }
 
-    .location,
     .title {
-        font-size: 2rem;
+        font-size: 1.25rem;
+        font-weight: bold;
+
+        @media (min-width: 30rem) {
+            font-size: 1.5rem;
+        }
+
+        @media (min-width: $max-width) {
+            font-size: 2rem;
+        }
     }
 
     .title {
-        margin: 4rem 0 1rem;
+        margin: 2rem 0 1rem;
     }
 
     .description {
-        font-size: 1.25rem;
-        line-height: 1.25;
         margin-bottom: 1rem;
+
+        @media (min-width: 30rem) {
+            font-size: 1.25rem;
+        }
     }
 
+    .presenter {
+        .fa {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.section--footer {
     .credit,
     .callout {
-        font-size: 1.25rem;
+        @media (min-width: 30rem) {
+            font-size: 1.25rem;
+        }
     }
 
     .credit {
