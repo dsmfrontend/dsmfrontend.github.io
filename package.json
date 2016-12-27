@@ -18,14 +18,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kjbrum/dsm-front-end.git"
+    "url": "https://github.com/dsmfrontend/dsmfrontend.github.io.git"
   },
   "author": "Kyle Brumm",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kjbrum/dsm-front-end/issues"
+    "url": "https://github.com/dsmfrontend/dsmfrontend.github.io/issues"
   },
-  "homepage": "https://github.com/kjbrum/dsm-front-end#readme",
+  "homepage": "https://github.com/dsmfrontend/dsmfrontend.github.io#readme",
   "devDependencies": {
     "autoprefixer": "latest",
     "node-sass": "latest",
