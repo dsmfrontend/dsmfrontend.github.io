@@ -277,7 +277,7 @@ a {
 
         small {
             // color: $secondary !important;
-            display: none;
+            display: none !important;
         }
 
         > span {
