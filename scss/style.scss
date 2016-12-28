@@ -260,7 +260,8 @@ a {
 .nvite-context-speaker,
 .nvite-context-sponsor,
 .nvite-context-host,
-.nvite-context-friend {
+.nvite-context-friend,
+.nvite-context-guest {
     &.nvite-card-context {
         background: $secondary !important;
         color: $primary !important;
@@ -276,8 +277,8 @@ a {
         }
 
         small {
-            // color: $secondary !important;
-            display: none !important;
+            color: $secondary !important;
+            // display: none !important;
         }
 
         > span {
@@ -290,7 +291,8 @@ a {
 @media (max-width: 30rem) {
     .nvite-widget-entity {
         &.nvite-context-host,
-        &.nvite-context-friend {
+        &.nvite-context-friend,
+        &.nvite-context-guest {
             $size: 50px;
             height: $size;
 
