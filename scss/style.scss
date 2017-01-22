@@ -117,7 +117,12 @@ a {
     h1 {
         margin: 0 0 2rem;
         font-size: 2.75rem;
-        line-height: 1;
+        line-height: 0.8;
+
+        a {
+            display: block;
+            text-decoration: none;
+        }
 
         @media (min-width: 30rem) {
             font-size: 5rem;
@@ -132,6 +137,12 @@ a {
 
             @media (min-width: $max-width) {
                 font-size: 9.1rem;
+            }
+        }
+
+        .talks {
+            @media (min-width: $max-width) {
+                font-size: 19.8rem;
             }
         }
     }
@@ -164,6 +175,7 @@ a {
     }
 
     .title {
+        margin: 2rem 0 1rem;
         font-size: 1.25rem;
         font-weight: bold;
 
@@ -176,27 +188,14 @@ a {
         }
     }
 
-    .title {
-        margin: 2rem 0 1rem;
-    }
-
     .description {
-        // margin-bottom: 1rem;
-
         @media (min-width: 30rem) {
             font-size: 1.25rem;
         }
     }
 
-    // .presenter {
-    //     .fa {
-    //         font-size: 1.5rem;
-    //     }
-    // }
-
     .details {
         margin-bottom: 1rem;
-
     }
 
     .speakers {
@@ -222,6 +221,38 @@ a {
 
         .sponsors {
             padding-left: 1rem;
+        }
+    }
+}
+
+.section--talks {
+    .date {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.25;
+
+        @media (min-width: 30rem) {
+            font-size: 1.75rem;
+        }
+    }
+
+    .title {
+        margin: 1rem 0;
+        font-size: 1.25rem;
+        font-weight: bold;
+
+        @media (min-width: 30rem) {
+            font-size: 1.5rem;
+        }
+
+        @media (min-width: $max-width) {
+            font-size: 2rem;
+        }
+    }
+
+    .description {
+        @media (min-width: 30rem) {
+            font-size: 1.25rem;
         }
     }
 }
