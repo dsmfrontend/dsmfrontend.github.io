@@ -114,6 +114,10 @@ a {
 }
 
 .section--hero {
+    @media (min-width: $max-width) {
+        text-align: center;
+    }
+
     h1 {
         margin: 0 0 2rem;
         font-size: 2.75rem;
@@ -154,11 +158,17 @@ a {
         line-height: 1.25;
 
         @media (min-width: 30rem) {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
 
         span {
             text-decoration: underline;
+        }
+
+        &.talks {
+            @media (min-width: $max-width) {
+                font-size: 2.4rem;
+            }
         }
     }
 }
