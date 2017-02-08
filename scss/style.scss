@@ -59,6 +59,15 @@ a {
     color: $primary;
 }
 
+hr {
+    display: block;
+    width: 100px;
+    height: 2px;
+    margin: 5rem 0;
+    border: none;
+    background: $primary;
+}
+
 ::selection {
     color: $secondary;
     background: #ccffd1;
@@ -236,6 +245,13 @@ a {
 }
 
 .section--talks {
+    .talk {
+        margin-bottom: 5rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
     .date {
         font-size: 1.25rem;
         margin-bottom: 0.5rem;
