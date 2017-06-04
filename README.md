@@ -5,4 +5,4 @@
 
 ## License
 
-Copyright © [Kyle Brumm](http://kylebrumm.com). Des Moines Front-End is free to use on whatever and may be redistributed under the terms specified in the [license](LICENSE.md).
+Copyright © [Des Moines Front-End](https://dsmfrontend.github.io). Des Moines Front-End is free to use on whatever and may be redistributed under the terms specified in the [license](LICENSE.md).
